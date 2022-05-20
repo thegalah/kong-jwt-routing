@@ -6,8 +6,8 @@ services:
             dockerfile: Dockerfile
         command: nginx -g 'daemon off;'
         depends_on:
-            - web-app
-            - api
+            - service-a
+            - service-b
         restart: always
         ports:
             - 80:80
