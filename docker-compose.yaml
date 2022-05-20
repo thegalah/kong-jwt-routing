@@ -1,9 +1,18 @@
 version: '3'
 services:
     reverse-proxy:
-        image: strm/nginx-balancer
+        build:
+            context: reverse-proxy
+            dockerfile: Dockerfile
+        command: nginx -g 'daemon off;'
+        depends_on:
+            - web-app
+            - api
+        restart: always
         ports:
-            - "8080:8080"
+            - 8080:8080
+        volumes:
+            - ./nginx-gateway:/logs
         environment:
             - "NODES=service-a:80 service-b:80"
     service-a:
