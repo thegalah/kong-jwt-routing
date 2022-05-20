@@ -1,8 +1,8 @@
 version: '3'
 services:
-    reverse-proxy:
+    load-balancer:
         build:
-            context: reverse-proxy
+            context: load-balancer
             dockerfile: Dockerfile
         command: nginx -g 'daemon off;'
         depends_on:
@@ -12,7 +12,7 @@ services:
         ports:
             - 80:80
         volumes:
-            - ./reverse-proxy:/logs
+            - ./load-balancer:/logs
         environment:
             - "NODES=service-a:80 service-b:80"
     service-a:
