@@ -12,7 +12,7 @@ services:
         ports:
             - 80:80
         volumes:
-            - ./nginx-gateway:/logs
+            - ./reverse-proxy:/logs
         environment:
             - "NODES=service-a:80 service-b:80"
     service-a:
