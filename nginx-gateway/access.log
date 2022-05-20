@@ -1,0 +1,5 @@
+172.21.0.1 - - [20/May/2022:06:27:26 +0000] "GET / HTTP/1.1" 200 388 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+172.21.0.1 - - [20/May/2022:06:27:32 +0000] "GET / HTTP/1.1" 200 388 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+172.21.0.1 - - [20/May/2022:06:28:25 +0000] "GET / HTTP/1.1" 200 399 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+172.21.0.1 - - [20/May/2022:06:28:27 +0000] "GET /home/ HTTP/1.1" 200 128 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
+172.21.0.1 - - [20/May/2022:06:28:28 +0000] "GET / HTTP/1.1" 200 399 "http://localhost/home/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36"
