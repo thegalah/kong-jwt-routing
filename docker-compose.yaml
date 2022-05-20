@@ -2,12 +2,13 @@ version: '3'
 services:
     reverse-proxy:
         image: strm/nginx-balancer
-        container_name: load-balancer
         ports:
-            - "80:8080"
+            - "8080:8080"
         environment:
             - "NODES=service-a:80 service-b:80"
     service-a:
+        hostname: service-a
         image: strm/helloworld-http
     service-b:
+        hostname: service-b
         image: strm/helloworld-http
