@@ -1,7 +1,7 @@
 version: '3'
 services:
     kong:
-        image: kong_nodb:latest
+        image: kong:2.8.1-alpine
         environment:
             KONG_DATABASE: "off"
             KONG_DECLARATIVE_CONFIG: kong.yml
