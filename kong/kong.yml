@@ -38,5 +38,5 @@ services:
   plugins:
   - name: rate-limiting
     config:
-      minute: 5
+      second: 1
       policy: local
