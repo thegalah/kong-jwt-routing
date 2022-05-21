@@ -35,3 +35,8 @@ services:
     paths:
     - /
     strip_path: true
+  plugins:
+  - name: rate-limiting
+    config:
+      minute: 5
+      policy: local
