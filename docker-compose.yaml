@@ -2,6 +2,8 @@ version: '3'
 services:
     kong:
         image: kong:2.8.1-alpine
+        volumes:
+            - kong:/etc/kong/
         environment:
             KONG_DATABASE: "off"
             KONG_DECLARATIVE_CONFIG: kong.yml
@@ -21,3 +23,6 @@ services:
     service-b:
         hostname: service-b
         image: strm/helloworld-http
+
+volumes:
+    kong:
