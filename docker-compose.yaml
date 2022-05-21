@@ -2,14 +2,12 @@ version: '3'
 services:
     kong:
         build:
-            context: .
-            dockerfile: ./kong/Dockerfile
+            context: ./kong
+            dockerfile: Dockerfile
 
-        volumes:
-            - kong:/etc/kong/
         environment:
             KONG_DATABASE: "off"
-            KONG_DECLARATIVE_CONFIG: kong.yml
+            KONG_DECLARATIVE_CONFIG: /etc/kong/kong.yml
         healthcheck:
             test: ["CMD", "curl", "-f", "http://kong:8000"]
             interval: 5s
@@ -26,6 +24,3 @@ services:
     service-b:
         hostname: service-b
         image: strm/helloworld-http
-
-volumes:
-    kong:
