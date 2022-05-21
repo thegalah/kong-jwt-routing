@@ -1,7 +1,10 @@
 version: '3'
 services:
     kong:
-        image: kong:2.8.1-alpine
+        build:
+            context: .
+            dockerfile: ./kong/Dockerfile
+
         volumes:
             - kong:/etc/kong/
         environment:
