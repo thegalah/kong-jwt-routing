@@ -6,7 +6,7 @@ services:
             KONG_DATABASE: "off"
             KONG_DECLARATIVE_CONFIG: kong.yml
         healthcheck:
-            test: [“CMD”, “curl”, “-f”, “http://kong:8000”]
+            test: ["CMD", "curl", "-f", "http://kong:8000"]
             interval: 5s
             timeout: 2s
             retries: 15
