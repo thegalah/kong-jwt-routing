@@ -34,6 +34,7 @@ services:
   - name: example-route
     paths:
     - /
+    strip_path: true
   # plugins:
   # - name: key-auth
 
