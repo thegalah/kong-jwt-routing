@@ -35,3 +35,8 @@ plugins:
     config: 
       strip_claims: "false"
       token_required: "false"
+  - name: route-by-header
+    config:
+      rules:
+      - condition: []
+        upstream_name:
