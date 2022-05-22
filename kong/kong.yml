@@ -7,16 +7,20 @@ _transform: true
 
 
 upstreams:
- - name: hello-world_upstream
+ - name: default_upstream
    targets:
      - target: service-a:80
        weight: 100
      - target: service-b:80
        weight: 100
+ - name: ring-0_upstream
+   targets:
+     - target: service-ring-0:80
+       weight: 100
 
 
 services:
-- name: hellow-world-service
+- name: hello-world-service
   host: hello-world_upstream
   routes:
   - name: default-route
@@ -30,3 +34,14 @@ services:
       policy: local
 
 
+plugins:
+  - name: kong-jwt2header
+    config: 
+      strip_claims: "false"
+      token_required: "false"
+  - name: route-by-header
+    config:
+      rules:
+      - condition:
+          - ring: "0"
+        upstream_name: ring-0_upstream

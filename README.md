@@ -1,1 +1,1 @@
-# nginx-jwt-routing
+# kong-jwt-routing
