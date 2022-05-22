@@ -1,0 +1,32 @@
+
+_format_version: "2.1"
+
+
+
+_transform: true
+
+
+upstreams:
+ - name: hello-world_upstream
+   targets:
+     - target: service-a:80
+       weight: 100
+     - target: service-b:80
+       weight: 100
+
+
+services:
+- name: hellow-world-service
+  host: hello-world_upstream
+  routes:
+  - name: default-route
+    paths:
+    - /.*
+    strip_path: true
+  plugins:
+  - name: rate-limiting
+    config:
+      second: 1
+      policy: local
+
+
