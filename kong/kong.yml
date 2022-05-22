@@ -21,7 +21,7 @@ services:
   routes:
   - name: default-route
     paths:
-    - /
+    - /.*
     strip_path: true
   plugins:
   - name: rate-limiting
