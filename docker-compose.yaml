@@ -21,4 +21,7 @@ services:
         image: strm/helloworld-http
     service-b:
         hostname: service-b
-        image: strm/helloworld-http
+        image: mendhak/http-https-echo:23
+        environment:
+            - HTTP_PORT=80
+            - HTTPS_PORT=9999
