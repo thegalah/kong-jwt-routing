@@ -34,4 +34,4 @@ plugins:
   - name: kong-jwt2header
     config: 
       strip_claims: "false"
-      token_required: "true"
+      token_required: "false"
