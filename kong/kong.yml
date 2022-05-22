@@ -28,12 +28,10 @@ services:
     config:
       second: 1
       policy: local
+
+
+plugins:
   - name: kong-jwt2header
     config: 
       strip_claims: "false"
       token_required: "true"
-  - name: jwt
-    config: 
-      secret_is_base64: false
-      run_on_preflight: true
-
