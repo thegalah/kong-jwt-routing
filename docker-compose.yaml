@@ -25,6 +25,3 @@ services:
     service-ring-0:
         hostname: service-ring-0
         image: strm/helloworld-http
-        environment:
-            - HTTP_PORT=80
-            - HTTPS_PORT=9999
