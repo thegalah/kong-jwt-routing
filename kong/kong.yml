@@ -29,8 +29,9 @@ services:
       second: 1
       policy: local
 
+plugins:
   - name: kong-jwt2header
     config: 
-      strip_claims: "false"
+      strip_claims: "true"
       token_required: "true"
 
